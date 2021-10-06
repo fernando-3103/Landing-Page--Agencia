@@ -1,0 +1,600 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;    
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 2%;
+}
+
+/* Header Section*/
+header{
+    display: flex;
+    width: 100%;
+}
+
+header > .header-logo{
+    width: 50%;
+}
+
+header > .header-logo > a{
+    color: rgb(255, 236, 153);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+header > .header-logo > a > .bold-part{
+    color: #fff;
+}
+
+header > .menu-items{
+    text-align: right;
+    width: 50%;
+}
+
+.menu-items a{
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.menu-items a:hover{
+    border-bottom: 3px solid rgb(255, 236, 153);
+}
+
+.menu-items a.contact-button{
+    background: linear-gradient(45deg, rgb(27, 16, 177), rgb(13, 104, 223));
+    border-radius: 10px;
+    box-shadow: -2px 2px 3px #333;
+    padding: 10px 15px;
+}
+
+.menu-items a.contact-button:hover{
+    background: linear-gradient(45deg,rgb(13, 104, 223), rgb(27, 16, 177));
+    color: rgb(255, 236, 153);
+    border: 0;
+}
+
+    /*Mobile Heder*/
+.menu-mobile{
+    display: none;
+    text-align: right;
+    width: 50%;
+}
+
+
+.menu-mobile-items{
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: 10px 0;
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+    visibility: hidden;
+}
+
+.items{
+    top: 50px;
+    border-radius: 50px;
+    filter: drop-shadow(2px 2px 2px #222);
+}
+
+.items:nth-child(1){
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 33px solid #ffffff;
+    margin-bottom: 5px;
+}
+
+.items:nth-child(2){
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 33px solid #2b37df;
+    margin: 0 45px;
+    margin-bottom: 5px;
+}
+
+.items:nth-child(3){
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 33px solid #ffffffdc;
+    margin: 0 91px;
+    margin-bottom: 5px;
+}
+
+.items:nth-child(4){
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 33px solid #2b37df;
+    margin: 0 135px;
+}
+
+span{
+    text-align: center;
+    margin-left: -22px;
+}
+
+span.item-1{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: -30px;
+}
+
+span.item-2{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: -30px;
+}
+
+span.item-3{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    margin-left: -50px;
+    top: -30px;
+}
+
+span.item-4{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    margin-left: -30px;
+    top: -30px;
+}
+
+.menu-mobile-items a{
+    display: block;
+    text-decoration: none;
+}
+
+.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Main Section */
+section.main{
+    background-image: url('../images/page-background.svg');
+    background-color: #eee;
+    background-position: center;
+    background-size: cover;
+    filter:hue-rotate(0deg);
+    min-height: 780px;
+    padding: 20px 0 80px 0;
+    animation: bg-change 25s linear infinite;
+}
+
+/* Mockup Section*/
+.mockup{
+    color: #fff;
+    display: block;
+    padding-top: 160px;
+    text-align: center;
+    width: 100%;
+}
+
+.mockup h2{
+    font-size: 30px;
+}
+
+.mockup p{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.mockup img{
+    max-width: 100%;
+}
+
+/* Brands*/
+section.brands img{
+    width: calc(100% / 5)
+}
+
+/* Why us */
+section.why_us{
+    background-color: #ebebeb;
+    padding: 40px 0;
+}
+
+section.why_us > .center > h2{
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+}
+
+section.why_us > .center > p{
+    color: rgb(78, 78, 78);
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Highlights*/
+.highlights{
+    display: flex;
+    margin-top: 50px;
+}
+
+.highlights-boxes{
+    border-radius: 15px;
+    box-shadow: -2px 3px 10px #999;
+    margin-right: 2%;
+    padding: 20px 20px;
+    width: 31%;
+}
+
+.highlights-boxes > img{
+    width: 100%;
+}
+
+.highlights-boxes > h4{
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+}
+
+.highlights-boxes > p{
+    color: darkgrey;
+    line-height: 50px;
+}
+
+/* Call to Action*/
+section.call-to-action{
+    color: #fff;
+    background-image: url(../images/contact-banner.svg);
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+section.call-to-action h2{
+    font-size: 32px;
+}
+
+section.call-to-action h2,
+section.call-to-action p{
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+a.button-cta{
+    background: linear-gradient(45deg, rgb(255, 245, 99), #ff5e00);
+    border-radius: 10px;
+    box-shadow: -2px 2px 6px rgb(1, 1, 182);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+/* Advantages*/
+section.advantages{
+    padding: 50px 10px;
+}
+
+section.advantages > .center{
+    max-width: 1500px
+}
+
+.benefits-list{
+    width: 45%;
+}
+
+.benefits-list .fa-check{
+    color: green;
+    margin-right: 13px;
+}
+.benefits-list h1{
+    color: rgb(0, 61, 0);
+    font-size: 35px;
+    text-decoration: dotted;
+}
+
+.benefits-list p{
+    line-height: 45px;
+}
+
+.benefits-list > a.button-cta{
+    background: linear-gradient(45deg, rgb(54, 118, 255), #7921dd);
+    border-radius: 10px;
+    box-shadow: -2px 2px 6px rgb(1, 1, 182);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-top: 35px;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+}
+
+.advantages-img{
+    width: 55%;
+}
+.advantages-img img{
+    border-radius: 15px;
+    box-shadow: -2px 2px 15px rgb(126, 173, 114);
+    float: right;
+    margin-top: 40px;
+    max-width: 100%;
+
+}
+
+/* Testimonials*/
+.testimonials{
+    background-color: #ebebeb;
+    padding: 40px 0;
+}
+
+.testimonials > .center{
+    display: block;
+}
+
+.testimonials > h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.container-slider{
+    overflow: hidden;
+}
+    /* sliders*/
+.slider-single{
+    background: rgb(233, 233, 233);
+    border-radius: 10px;
+    box-shadow: -2px 2px 5px rgb(153, 153, 153);
+    float: left;
+    padding: 10px;
+    text-align: center;
+}
+
+.slider-single > .person-img{
+    background-size: cover;
+    border-radius: 50%;
+    filter: drop-shadow(-2px 2px 4px #999);
+    width: 140px;
+    height: 140px;
+}
+
+.slider-single h3{
+    text-align: center;
+}
+
+.slider-single p{
+    padding: 10px 20px;
+    line-height: 30px;
+    text-align: left;
+    
+}
+
+.slick-slide{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.slider-single > .fa-star{
+    color: rgb(255, 217, 0);
+}
+
+    /**** button sliders ****/
+.slick-dotted ul{
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+}
+
+.slick-dotted li{
+    display: inline-block;
+    margin-top: 20px;
+    margin: 15px 5px;
+}
+
+.slick-dotted button:focus{
+    outline: 0;
+}
+
+.slick-dotted li button{
+    color: lightskyblue;
+    cursor: pointer;
+    background: lightskyblue;
+    border-radius: 8px;
+    border-width: 0;
+    height: 16px;
+    opacity: 1;
+    width: 16px;
+}
+
+li.slick-active button{
+    background: lightseagreen;
+    color: lightseagreen;
+}
+
+/* Contact Section */
+section.contact{
+    padding: 40px 0;
+    text-align: center;
+}
+
+section.contact h1{
+    font-size: 50px;
+}
+
+section.contact > .center{
+    max-width: 800px;
+}
+
+section.contact form{
+    width: 100%;
+}
+
+section.contact input[type=text],
+section.contact input[type=email]{
+    border-radius: 5px;
+    border: 0.3px solid #999;
+    height: 45px;
+    margin: 10px 0;
+    padding-left: 15px;
+    width: 100%;
+}
+
+section.contact textarea{
+    border-radius: 5px;
+    border: 0.3px solid #999;
+    height: 150px;
+    margin: 10px 0;
+    padding: 15px;
+    resize: none;
+    width: 100%;
+}
+
+section.contact input[type=submit]{
+    background: linear-gradient(45deg, rgb(0, 0, 167), rgb(36, 94, 255));
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 5px #222;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    height: 45px;
+    width: 100%;
+}
+
+/* Footer */
+footer{
+    background: linear-gradient(45deg, rgb(0, 0, 167), rgb(36, 94, 255));
+    height: 150px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer .footer-text{
+    color: #fff;
+    font-weight: 500;
+    width: 50%;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px){
+    /* Global */
+    .center{
+        padding: 0;
+    }
+
+    /* Menu Mobile Section */
+    header .header-logo{
+        padding: 0 15px;
+    }
+
+    header .menu-items{
+        display: none;
+    }
+
+    header .menu-mobile{
+        display: block;
+        position: absolute;
+        width: 100%;
+    }
+
+    header .menu-mobile i{
+        color: white;
+        cursor: pointer;
+        padding: 0 15px;
+    }
+
+    /* Highlights Section*/
+    .highlights{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .highlights-boxes{
+        margin: 15px 30px;
+        width: 100%;
+    }
+
+    /* Brands section*/
+    section.brands{
+        text-align: center;
+    }
+
+    section.brands img{
+        width: 50%;
+    }
+
+    /* Advantages section*/
+    .benefits-list,  .advantages-img{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .benefits-list > a.button-cta{
+        width: 100%;
+    }
+
+    /* Footer */
+    footer{
+        height: auto;
+    }
+
+    footer .footer-text{
+        float: inline-end;
+        order: 2;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer .menu-items{
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    footer .menu-items a{
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+     
+}
+
+@keyframes bg-change{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    25%{
+        filter: hue-rotate(50deg);
+    }
+    50%{
+        filter: hue-rotate(0deg);
+    }
+    75%{
+        filter: hue-rotate(-50deg);
+    }
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
